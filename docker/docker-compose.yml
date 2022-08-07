@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  terraria:
+    image: "ryshe/terraria:tshock-1.4.3.6-4.5.17-3"
+    container_name: "terraria"
+    tty: true
+    stdin_open: true
+    ports:
+      - "7777:7777"
+    environment:
+      TZ: "Asia/Tokyo"
+      WORLD_FILENAME: "Corrupt-world.wld"
+    volumes:
+      - "${WORLD_DIR:-./data/worlds}:/root/.local/share/Terraria/Worlds"
+      - "${LOG_DIR:-./data/logs}:/tshock/logs"                      
+      - "${PLUGIN_DIR:-./data/plugins}:/plugins"
+    restart: unless-stopped
