@@ -10,6 +10,7 @@ services:
       - "7777:7777"
     environment:
       TZ: "Asia/Tokyo"
+      WORLD_FILENAME: "Corrupt-world.wld"
     volumes:
       - "${WORLD_DIR:-./data/worlds}:/root/.local/share/Terraria/Worlds"
       - "${LOG_DIR:-./data/logs}:/tshock/logs"                      
