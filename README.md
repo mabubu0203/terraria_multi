@@ -12,8 +12,9 @@
 1. world作成    
   `$ cd docker`  
   `$ docker-compose ps`  
-  `$ docker-compose exec terraria /bin bash`
-  `$ sh /bootstrap.sh` 
+  `$ docker-compose exec terraria bash`
+  `$ sh ./bootstrap.sh`
+  CLIに従い作成 
   world生成後、設定修正
   `$ cp ./docker/.env.sample ./docker/.env`  
   `$ vi ./docker/.env`  
@@ -28,10 +29,7 @@ stop -> `$ docker-compose -f ./docker/docker-compose.yml stop`
 ```bash
 root
 - docker
-  - data
-    - logs
-    - plugins
-    - worlds
-    - config.json
+  - terraria
+    - **.wld
 - README.md
 ```
