@@ -10,11 +10,6 @@ services:
       - "7777:7777"
     environment:
       TZ: "Asia/Tokyo"
-      LOGPATH: "/terraria-server/logs"
-      WORLDPATH: "/root/.local/share/Terraria/Worlds"
-      WORLD_FILENAME: "Corrupt-world.wld"
-      CONFIGPATH: "/config"
-      CONFIG_FILENAME: "serverconfig.txt"
     volumes:
       - "./terraria:/root/.local/share/Terraria/Worlds"
     restart: unless-stopped

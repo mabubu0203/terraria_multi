@@ -12,8 +12,8 @@
 1. world作成    
   `$ cd docker`  
   `$ docker-compose ps`  
-  `$ docker-compose exec terraria /bin bash`
-  `$ sh /bootstrap.sh` 
+  `$ docker-compose exec terraria bash`
+  `$ sh ./bootstrap.sh` 
   world生成後、設定修正
   `$ cp ./docker/.env.sample ./docker/.env`  
   `$ vi ./docker/.env`  
