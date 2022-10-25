@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   terraria:
-    image: "ryshe/terraria:vanilla-1.4.4.5"
+    image: "ryshe/terraria:vanilla-1.4.4.7"
     container_name: "terraria"
     tty: true
     stdin_open: true
